@@ -1,4 +1,4 @@
-# Technical Sync Notes for 2020
+# 2020 Technical Sync Notes
 
 ## Details
 
@@ -10,7 +10,7 @@ Weekly technical sync meetings are a chance for active **@bokeh/dev** members to
 
 ## Links
 
-[January](technical/2020-01.md)
+- [January](https://hackmd.io/@bokeh/SkmCmJQeI)
 
 ## Template
 ```
