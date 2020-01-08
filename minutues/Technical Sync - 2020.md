@@ -8,6 +8,10 @@ Weekly technical sync meetings are a chance for active **@bokeh/dev** members to
 
 **Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
 
+## Links
+
+[January](technical/2020-01.md)
+
 ## Template
 ```
 # Date
