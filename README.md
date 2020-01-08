@@ -1,2 +1,3 @@
-# pm
-Project Management resources for the Bokeh Organization
+# Project Management
+
+Team project resources for the Bokeh Organization
