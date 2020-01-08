@@ -8,6 +8,10 @@ Weekly technical sync meetings are a chance for active **@bokeh/dev** members to
 
 **Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
 
+**Minutes**
+- HackMD: https://hackmd.io/@bokeh/r1yej0fg8
+- GitHub Archive: [minutues/Technical Sync - 2020.md](https://github.com/bokeh/pm/blob/master/minutues/Technical%20Sync%20-%202020.md)
+
 ## Links
 
 - [January](https://hackmd.io/@bokeh/SkmCmJQeI)
