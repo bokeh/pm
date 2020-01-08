@@ -2,11 +2,11 @@
 
 ## Details
 
+Weekly technical sync meetings are a chance for active **@bokeh/dev** members to share technical updates about ongoing and planned work.
+
 **Time:** Wednesdays @ 08:00 Pacific US time (UTC -08:00)
 
 **Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
-
-## Links
 
 ## Template
 ```
@@ -21,7 +21,7 @@
   
 ## Updates
 
-### Bryan
+### Name
 - update1
 - update2
 
