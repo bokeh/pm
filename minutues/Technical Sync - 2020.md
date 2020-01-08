@@ -1,7 +1,8 @@
 # Technical Sync Notes for 2020
 
-## Template
+Location: https://meet.google.com/dtm-iycn-ctx?hs=122
 
+### Template
 ```
 ## YYYY-MM-DD
 
