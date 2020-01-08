@@ -1,37 +1,29 @@
 # Technical Sync Notes for 2020
 
+## Details
+
 **Time:** Wednesdays @ 08:00 Pacific US time (UTC -08:00)
 
 **Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
 
-### Template
+## Links
+
+## Template
 ```
-# YYYY-MM-DD
+# Date
 
 *Attending:*
 
-## Updates
-* Name
- - update1
- - update2
-
 ## Agenda
-* item1
-* item2
+- item1
+- item2
+  - **Decision:**
+  
+## Updates
+
+### Bryan
+- update1
+- update2
 
 ## Actions
 ```
-
-# 2020-01-08
-
-*Attending:*
-
-## Updates
-* Bryan
-  - test 
-
-## Agenda
-* item1
-* item2
-
-## Actions/Decisions
