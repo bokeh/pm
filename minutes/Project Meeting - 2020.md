@@ -9,7 +9,7 @@ The twice-monthly Project Meeting is a chance for Bokeh contributors to discuss 
 **Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
 
 **Minutes**
-- HackMD: 
+- HackMD: https://hackmd.io/@bokeh/rJrJh6wg8
 - GitHub Archive: [minutes/Project Meeting - 2020.md](https://github.com/bokeh/pm/blob/master/minutes/Project%20Meeting%20-%202020.md)
 
 ## Template
