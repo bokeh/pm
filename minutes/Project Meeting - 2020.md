@@ -35,5 +35,6 @@ The twice-monthly Project Meeting is a chance for Bokeh contributors to discuss 
 
 ## Agenda
 - (bev) Review 2.0 milestone items and prune as appropriate
+- (bev) CZI Round 2 plans/status
 
 
