@@ -2,7 +2,7 @@
 
 ## Details
 
-Weekly technical sync meetings are a chance for active **@bokeh/dev** members to share technical updates about ongoing and planned work.
+Weekly technical sync meetings are a chance for active **@bokeh/dev** members to share technical updates about ongoing and planned work. Test edit!
 
 **Time:** Wednesdays @ 08:00 Pacific US time (UTC -08:00)
 
