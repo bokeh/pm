@@ -10,7 +10,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 **Minutes**
 - HackMD: https://hackmd.io/@bokeh/r1yej0fg8
-- GitHub Archive: [minutes/Technical Sync - 2020.md](https://github.com/bokeh/pm/blob/master/minutes/Technical%20Sync%20-%202020.md)
+- GitHub Archive: [minutes/Technical Sync - 2020.md](https://github.com/bokeh/pm/blob/master/minutes/Weekly%20Sync%20-%202020.md)
 
 ## Links
 
