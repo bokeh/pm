@@ -15,6 +15,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 ## Links
 
 - [January](https://hackmd.io/@bokeh/SkmCmJQeI)
+- [February](https://hackmd.io/@bokeh/rJNpZ_uM8)
 
 ## Template
 ```
