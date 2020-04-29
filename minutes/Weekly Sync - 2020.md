@@ -1,12 +1,46 @@
 # 2020 / Weekly Sync
 
-GitHub Archive: [minutes/weekly/2020.md](https://github.com/bokeh/pm/blob/master/minutes/weekly/2020.md)
+## Details
+
+Weekly sync meetings are a chance for active **@bokeh/dev** members to share technical updates about ongoing and planned work.
+
+**Time:** Wednesdays @ 08:00 Pacific US time (UTC -08:00)
+
+**Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
+
+**Minutes**
+- HackMD: https://hackmd.io/@bokeh/HyYsdmvFI
+- GitHub Archive: [minutes/Weekly Sync - 2020.md](https://github.com/bokeh/pm/blob/master/minutes/Weekly%20Sync%20-%202020.md)
+
+## Links
 
 * [May](#May)
 * [April](#April)
 * [March](#March)
 * [February](#Februry)
 * [January](#January)
+
+## Template
+```
+# Date
+
+*Attending:*
+
+## Agenda
+- item1
+- item2
+  - **Decision:**
+  
+## Updates
+
+### Name
+- update1
+- update2
+
+## Actions
+```
+
+---
 
 # May
 
