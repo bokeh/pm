@@ -46,15 +46,17 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 * [DD-MMM](#DD-MMM)
 
-# DD MMM
+## 06 May
 
 *Attending: *
 
-## Agenda
+### Agenda
+- AWS cleanup
+    - can ci.bokeh.org be retired?
 
-## Updates
+### Updates
 
-## Actions
+### Actions
 
 # April
 
@@ -64,56 +66,56 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 * [08-Apr](#08-Apr)
 * [01-Apr](#01-Apr)
 
-# 29 Apr
+## 29 Apr
 
 *Attending: Ayush, Bryan, Mateusz, Pavithra, Philipp, Ryan*
 
-## Agenda
+### Agenda
 
 - 2FA for GitHub (update)
 - PyCon US mentored sprints for diversity beginners
     - 17th May (4 hours), apply by 10th.
 
-## Updates
+### Updates
 
-### Bryan
+#### Bryan
 
 - Continued working on the PR on new marker types.
 - Maybe look into WebGL in a month or so.
 - Turned on TFA for GH
 - Worked on release stuff
 
-### Pavithra
+#### Pavithra
 
 - GSOD application to submit by Friday
 
-### Mateusz
+#### Mateusz
 
 - Wrapping up color mapping and color bar PR by tomorrow
 - PR on establishing painting engine
     - support gridplots on a single canvas
     - early, perhaps done in a few weeks
 
-### Ryan
+#### Ryan
 
 - Working on some first issues
 
-### Ayush
+#### Ayush
 
 - Ready to get started at GSOC start
     - 4th May
 
-## Actions
+### Actions
 - [ ] **(Mateusz) Look in to keeping OTP token turned for NPM**
 - [ ] (Mateusz) Open an issue to discuss testing automation
 - [x] (Bryan) Set up Google calendar for Project 
 - [ ] (Pavithra) Submit GSoD application by Friday
 
-# 22 Apr
+## 22 Apr
 
 *Attending: Ayush, Bryan, Carolyn, James, Mateusz, Pavithra, Philipp*
 
-## Agenda
+### Agenda
 
 - 2.0.2 retro
     - Will finalize release today
@@ -122,48 +124,48 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - NumFocus SDG Round 2 
 - 2FA for GitHub
 
-## Updates
+### Updates
 
-### Philipp
+#### Philipp
 
 - Testing with 2.0.2rc
 - Starting on Jupyter blog post iywidgets
 
-### Pavithra
+#### Pavithra
 
 - Start working on application
     - Meeting on the 27th
 - Starting GSOD Ideas wiki page
 
-### Carolyn
+#### Carolyn
 
 - 2.0.2 blog post draft on Medium, mostly ready to go, need ipywidgets screen shots?
 - project updates due to NF today
 
-### Mateusz
+#### Mateusz
 
 - finalizing image diff tests
 - multi-canvas renderer
 - color bar/color mapping improvements
 
-### Bryan 
+#### Bryan 
 
 - Working on build release stuff
 - Working on Slack integrations
 - Working on markers
 
-## Actions
+### Actions
 
 - [x] **(Philipp) Comment on existing ipwidgets docs**
 - [x] **(Philipp) Chase up Jim about ipywidgets blog post**
 - [ ] **(Mateusz) Look in to keeping OTP token turned for NPM**
 - [x] (Bryan) send out info to previous CZI proposal
 
-# 15 Apr
+## 15 Apr
 
 *Attending: Bryan, Pavitha, Philipp, Ryan*
 
-## Agenda
+### Agenda
 
 - Release 2.0.2
     - Plan cut release over weekend/announce on Monday
@@ -173,35 +175,35 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Season of Docs
     - Org application is currently open
 
-## Updates
+### Updates
 
-### Philipp
+#### Philipp
 - testing django/windows fix
 - created issue for token / secret cookies
 
-### Pavithra
+#### Pavithra
 
 - Looking into Season of Doc
 
-### Carolyn
+#### Carolyn
 
 - what can I do to be helpful with Ayush?
 - align on plan for Fundamentals of Data Visualization notebooks
 - Scipy 2020 virtual, anyone want to submit?
 
-### Mateusz
+#### Mateusz
 
 - Continuing working on colorbar
 - Working on making bokehjs shadow DOM
 
-### Bryan 
+#### Bryan 
 
 - Little bit of clean-up: miniconda
 - Added some missing release notes
 - Continue working on release automation
 - Working on new markers (for 2.1)
 
-## Actions
+### Actions
 
 - [x] (Bryan) Intentionally check GitGuardian on a smaller repo
 - [x] (Pavithra) Create a Slack channel for Season of Docs
@@ -209,11 +211,11 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - [ ] **(Philipp) Chase up Jim about ipywidgets blog post**
 - [ ] **(Mateusz) Look in to keeping OTP token turned for NPM**
 
-# 08 Apr
+## 08 Apr
 
 *Attending: Bryan, Carolyn, Mateusz, Pavithra, Philipp*
 
-## Agenda
+### Agenda
 
 - Slack / Delete Gitter and Zulip
     - bokeh-dev.slack.com
@@ -221,9 +223,9 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - NPM tokens?
 - Google Season of Docs
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 
 * Working on bokehjs testing infrastrucure
   * `await view.ready` now waits for deferred rendering to finish
@@ -233,22 +235,22 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 * Working on making bokehjs shadow DOM and web component compatible
 * Allow to update `FactorRange.factors`
  
-### Philipp
+#### Philipp
 
 * Fix Django Server by switching to CDN resources by default and then get proper fix in
 
-### Bryan
+#### Bryan
 
 * 2 small PRs closed
 * Slack setup
 * GsoC things
 * Working on automating releases
 
-### Carolyn
+#### Carolyn
 
 * Work on Jupyter blog post
 
-## Actions
+### Actions
 
 * [ ] *(Philipp) Comment on existing ipwidgets docs*
 * [x] *(Pavithra) Add FDV Notebook for chapter 1*
@@ -257,39 +259,39 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 * [x] (Philipp) Create issue about token encryption and whitelisting cookies
 * [x] (Bryan) Try to get shadow DOM complete example from Discourse user
 
-# 01 Apr
+## 01 Apr
 
 *Attending: Bryan, Mateusz, Pavithra, Philipp*
 
-## Agenda
+### Agenda
 
 - New hackmd note for April?
 - GSoC review period
 - Credential spill
 - Release automation questions
 
-## Updates
+### Updates
 
-### Philipp
+#### Philipp
 
 - Look at Django integration (extend extension serving to Django)
 - Experiments with multiple kernels for ipywidgets integrations
 
-### Mateusz
+#### Mateusz
 
 - Docs/widgets for ipywidgets
 - Experiments with multiple kernels for ipywidgets integrations
 - Fixed issue with reloading saved content
 - Multiple BokehJs versions per page
 
-### Bryan
+#### Bryan
 
 - 2.0.1 released
 - Automation work releases
 - Look at the GSoC ideas page
 - Re-deployed demo site on Elastic Beanstalk
 
-## Actions
+### Actions
 
 * [x] (Bryan) this content to new April HackMD note
 * [x] (Bryan) ping Chris Holdgraf about nbviewer 
@@ -306,22 +308,22 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 * [11-Mar](#11-Mar)
 * [04-Mar](#04-Mar)
 
-# 25 Mar
+## 25 Mar
 
 *Attending: Carolyn, Mateusz, Philipp, Pavithra*
 
-## Agenda
+### Agenda
 
 - (none today)
 
-## Updates
+### Updates
 
-### Philipp
+#### Philipp
 
 - Will try fix MultiChoice placeholder today
 - Will investigate throttling in jupyter_bokeh 
 
-### Mateusz
+#### Mateusz
 
 - ipywidgets_bokeh
   - finished update to jlab 2.x
@@ -332,66 +334,66 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
   - added support for serving extensions' static files
   - started `future` branch to collect changes for bokeh 3.0
 
-### Carolyn
+#### Carolyn
 
 - Invitation to guest-post on Jupyter blog
 - FDV notebook work still to do
 
-### Pavithra
+#### Pavithra
 
 - Progress on FDV Notebook
 
-### Bryan (post-meeting update)
+#### Bryan (post-meeting update)
 
 - 2.0.1: hopefully rc today
 
-## Actions
+### Actions
 
 - [ ] (Mateusz) submit a PR to panel to make it npm publishable
 
-# 18 Mar
+## 18 Mar
 
 *Attending: Bryan, Carolyn, Jim, Mateusz, Philipp, Pavithra*
 
-## Agenda
+### Agenda
 
 - GH Security alerts
 - 2.0.1 release plans
 
-## Updates
+### Updates
 
-### Philipp
+#### Philipp
 
 - Switched to Bokeh.require in HoloViews/GeoViews CustomJS callbacks; would be good to maintain compatibility for this in the future
 - Would be good to document how to build a bokeh extension
 
-### Mateusz
+#### Mateusz
 
 - Made ipywidgets integration work with jupyter 2.0
 - Progress on binary protocol
 
-### Carolyn
+#### Carolyn
 
 - started on FDV notebook work; a little behind, but it's going
 - in touch with Ana about publicizing Jupyter integration; already went out with Tracking Jupyter newsletter, she has offered to tweet
 
-### Jim
+#### Jim
 
 - Anaconda's been in a lean phase, consulting-wise, but now there are lots of upcoming contracts. Less time to spend on fundamentals; switching to a feature mode rather than integration mode.
 
-### Bryan 
+#### Bryan 
 
 - Re-deployed 2.0 docs with SRI hashes
 
-## Actions
+### Actions
 
 - [ ] (Bryan) 2.0.1 release
 
-# 11 Mar
+## 11 Mar
 
 *Attending: Bryan, Carolyn, Jim, Philipp*
 
-## Agenda
+### Agenda
 - Release retro
     - Good response, no major problems so far 
 - IPywidgets / process
@@ -399,14 +401,14 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Release cadence
     - quick cadence, 2.0.1 as soon as next week
 
-## Updates
+### Updates
 
-### Philipp
+#### Philipp
 
 - Working on compat upstream releases
     - running into conda issues
 
-### Mateusz
+#### Mateusz
 
 - Updated jupyter_bokeh
     - compat with Bokeh 2.0 and Jupyter 2.0
@@ -414,53 +416,53 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - Hopefully can avoid custom kernel parts
 - Binary protocol improvements on hold but ongoing 
 
-### Carolyn
+#### Carolyn
 
 - Couple of LI posts to queue up
 - Starting on Wilke work
 
-### Bryan 
+#### Bryan 
 
 - Need to restore automation for releases
 - Want to get back to a faster release cadence
     - BokehJS that doesn't rely on GH
 - no major problems with 2.0 release
 
-## Actions
+### Actions
 
 - [ ] (Bryan) shoot for 2.0.1 as soon as next week 
 - [x] (Carolyn) identify opportunities to publicize Bokeh+jupyter integrations
 - [x] (Carolyn) begin on Wilke translations
 
-# 04 Mar
+## 04 Mar
 
 *Attending: Bryan, James, Mateusz, Pavithra, Philipp*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
     - packages built
 - Release Blog Post
 - FDV notebooks
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 
 - working on binary protocol, array class
 - looking in to shadow DOM 
 
-### Bryan
+#### Bryan
 
 - Release candidate
   - testing, fixed problems
   - todo: manual testing on windows
 - Helping with the 2.0 blog post
 
-### Philipp
+#### Philipp
 
 - Working on Bokeh compat issues for Panel and Holoviews
 
-## Actions
+### Actions
 
 - [ ] Release on Monday
 - [x] (bryan) Leave comments on Chartify and PandasBokeh
@@ -474,11 +476,11 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 * [12-Feb](#12-Feb)
 * [05-Feb](#05-Feb)
 
-# 26 Feb
+## 26 Feb
 
 *Attending: Bryan, Mateusz, Pavithra*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
     - Release candidate out tonight
     - Plan release on Monday
@@ -486,13 +488,13 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Porting layout performance improvements from Panel?
     - Matesuz decided not to do for this release
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 - toolbar short term fixes
 - working on test infrastructure 
 
-### Bryan
+#### Bryan
 - Closed some PRs
     - BOKEH_VERSION-BOKEH_CDN_VERSON 
         - not working in general due to too-strict Resources checks
@@ -502,17 +504,17 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - Changed the refdocs to include inherited properties
     - Broken Bokeh commands removed
 
-## Actions
+### Actions
 
 - [ ] (Carolyn) finish 2.0 release post for Medium
 - [ ] (Bryan) Get release candidate out tonight
 - [ ] (Mateusz) Manual build and documentation updates
 
-# 19 Feb
+## 19 Feb
 
 *Attending: Bryan, Carolyn, Jim, Mateusz, Pavithra, Philipp*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
     - code freeze friday, release mid-week next
     - milestone list pruned
@@ -522,26 +524,26 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Porting layout performance improvements from Panel?
     - Do plan to port over changes from Panel
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 - bokeh.io export changes, in good shape now
 - still WIP for resources
     - perhaps should wait until after 2.0
 
-### Carolyn
+#### Carolyn
 - Writing up release 2.0 blog post
     - Need screen shots, copy, etc for blog post
 - Plan social media updates after GSOC launch announce
 - Update to NF newsletter (due today)
 
-### Philipp
+#### Philipp
 - Token PR merged
 - Updating upstream projects for compatibility
 - Get back to Multichoice PR and annoying Toolbar bug 
 - Ask for PR review of template items
 
-### Bryan
+#### Bryan
 
 - Bunch of small PRs this week, including removing broken bokeh commands (html, etc; json still works and was left in)
 - PR to fix export png on OSX
@@ -550,7 +552,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Deleted custom.md template for issues
 - Clarified scales hierarchy
 
-## Actions
+### Actions
 
 - [x] ***(Phillip) Merge MultiChooser PR***
 - [x] *(Bryan and Mateusz) Write up cases for/against Black formatting*
@@ -558,11 +560,11 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - [ ] (Carolyn) finish 2.0 release post for Medium
 - [x] (Carolyn) line up social media releases for GSOC
 
-# 12 Feb
+## 12 Feb
 
 *Attending: Bryan, Mateusz, Pavithra, Phillip*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
     - holding pattern for resources and token works
 - GSOC Status/Updates 
@@ -571,9 +573,9 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - proposal: 4-6 week cadence for small 
         - Maybe create a BEP to describe intentions?
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 
 - Testing PR in better shape 
     - visual differences limited to fonts
@@ -581,7 +583,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - hopefully done today
 - Exports work PR 
 
-### Phillip
+#### Phillip
 
 - Token PR mostly happy with 
     - Examples tests need to be fixed up
@@ -591,12 +593,12 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - running in to APIs that were broken but not documented
         - (decision) put back old functions possibly deprecated
 
-### Pavithra
+#### Pavithra
 
 - Tested "manual" dev builds
     - Conda/Pip package install/work as expected
 
-### Bryan 
+#### Bryan 
 
 - Pycascades sprints
     - 2-3 people stopped by, worked on examples and tutorials
@@ -607,18 +609,18 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Merged PR for removing test marks
     - Run tests now using directory e.g. `py.test tests/unit`
 
-## Actions
+### Actions
 
 - [ ] ***(Phillip) Merge MultiChooser PR***
 - [x] *(Bryan and Mateusz) Write up cases for/against Black formatting*
 - [ ] (Phillip) put back webdriver functions
 - [x] (Bryan) Discuss GSOC publicity/etc with Carolyn
 
-# 05 Feb
+## 05 Feb
 
 *Attending: Bryan, Mateusz, Pavithra*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
     - One more day for Resources work + SRI hashes
     - Push schedule one week - code freeze next Monday, release following
@@ -630,9 +632,9 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - No updates or further communication
     - Asked Phllip to ping one of their new contributors
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 
 - Work to finish exporting on Chrome/FF across platforms
     - differences in lightness of pixels (e.g. due to font rendering)
@@ -644,7 +646,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 - Plan to move "examples integration" tests out of examples and in to integration
 
-### Bryan 
+#### Bryan 
 
 - PR to remove use of pytest marks 
     - need to fix up some tests that were failing (and skipped earlier
@@ -660,7 +662,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - More work to set up Zulip
     - set up Twitter, GitHub, Pingdom, Stack Overflow integrations
 
-## Actions
+### Actions
 
 - [ ] ***(Phillip) Merge MultiChooser PR***
 - [x] (Bryan) Finish uploading README screenshots
@@ -674,11 +676,11 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 * [15-Jan](#15-Jan)
 * [08-Jan](#08-Jan)
 
-# 29 Jan
+## 29 Jan
 
 *Attending: Bryan, Carolyn, Mateusz, Pavithra, Phillip*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
     - Code freeze coming Monday Feb 3
     - Tentative release date: Feb 10
@@ -689,30 +691,30 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Pyladies Dashboard
     - Consider panel, maybe grant
 
-## Updates
+### Updates
 
-### Phillip
+#### Phillip
 
 - Panel release done
 - MultiChoice PR needs tests 
 
-### Carolyn
+#### Carolyn
 - Graphics for NF annual report done and submitted
 
-### Mateusz
+#### Mateusz
 
 - Design of resources PR submitted (WIP)
     - try to have ready to test tomorrow
 - Experimental work on tests and image test
 
-### Bryan 
+#### Bryan 
 - Working on PR for adding package imports; mostly done, needs tests
 - Set up a webinar with Quansight around 2.0 release, scheduled for Feb 21st
 - Setting up Zulip chat instance (replacing gitter); bokeh.zulipchat.com
 - merged several PRs; suddenly a large support surge, staying on top of those
 - just passed 1.2M package downloads! almost a million pip package downloads; surpassing conda 3:1
 
-## Actions
+### Actions
 
 - [ ] ***(Phillip) Merge MultiChooser PR***
 - [x] ***(Bryan) Cut a manual dev build***
@@ -720,11 +722,11 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - [x] (Bryan) Forward NF Dashboard email to others
 - [x] (Bryan) Move some issues to new (version) milestone and report in email
 
-# 22 Jan
+## 22 Jan
 
 *Attending: Bryan, Mateusz, Pavithra, Philipp*
 
-## Agenda
+### Agenda
 - Review milestone and release schedule
 - GSOC
 - Tidelift (funds to go in to Bokeh NF account)
@@ -732,9 +734,9 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Ipywidgets docs
     - *Decision: Jupyter chapter split into notebooks/ipywidgets*
 
-## Updates
+### Updates
 
-### Mateusz
+#### Mateusz
 - Testing infra work and improvements
 - Experiments with testing with headless FF
 - Almost done with properties system PR
@@ -742,36 +744,36 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Started splitting up BokehJS, very large test
     - existing issue to discuss how to split out
 
-### Bryan 
+#### Bryan 
 - Work improve glyph method function signature
 - Publish (draft) ideas list for GSOC 2020 
     - https://github.com/bokeh/bokeh/wiki/GSOC-2020-Ideas-Page
 - Add CI version check 
 
-### Philipp
+#### Philipp
 - No Bokeh updates (working on Panel release)
 
-## Actions
+### Actions
 - [ ] ***(Phillip) Merge MultiChooser PR***
 - [ ] *(Bryan) Cut a manual dev build*
 - [x] (Mateusz) Push preview of PRs
 
-# 15 Jan
+## 15 Jan
 
 *Attending: Bryan, Mateusz, Pavithra, Phillip*
 
-## Agenda
+### Agenda
 - Discuss milestone and release 
     - *Decision* Milestone was pruned, feature cutoff in two weeks
 
-## Updates
+### Updates
 
-### Phillip
+#### Phillip
 - no updates busy with PyViz
 - new PR for node glyph type
 - back to multi-chooser P
 
-### Mateusz
+#### Mateusz
 - published ipywidgets bokeh extension to anaconda.org
 - unable to publish to PyPI (need broader token)
     - Bryan will update tokens (need issue)
@@ -779,14 +781,14 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - will deprecate old package org at 2.0 on NPM
 - writing documentation for jupyter extention
 
-### Bryan
+#### Bryan
 * Merge py3.8 support PR
 * CI also runs on push master
 * Will merge recent PR about export PR
 * Updated DatePicker PR, ready for merge
 * Meeting with HackMD abut free team plan
 
-## Actions
+### Actions
 
 - [ ] *(Phillip) Merge MultiChooser PR*
 - [x] *(Bryan) Make an issue about examples and integration test issues* [`#9597`](https://github.com/bokeh/bokeh/issues/9597)
@@ -794,16 +796,16 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - [x] (Bryan) Add commits from old 3.8 PR to verify python version [`#9598`](https://github.com/bokeh/bokeh/pull/9598)
 - [ ] (Bryan) Cut a manual dev build (~~merge NPM PR before~~)
 
-# 08 Jan
+## 08 Jan
 
 *Attending: Bryan, Mateusz, Pavithra, Phillip*
 
-## Agenda
+### Agenda
 * Switch to HackMD for collaborative notes
 
-## Updates
+### Updates
 
-### Phillip
+#### Phillip
 - Blocked on other package work
 - Return to auth token work today
 - MulitiChoice widget, include in separate bundle
@@ -811,20 +813,20 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Fullscreen PR decide on dependency
     - *Decision: continue work on prototype (other issues still) but try not to avoid dependency*
 
-### Mateusz
+#### Mateusz
 - Jupyter integration done (?)
     - extension still to be published
 - Working on grid plots on single canvas 
     - looking at having annotations span all sub-canvases
 
-### Bryan
+#### Bryan
 - Merged new contributor PRs
 - Closed some small milestone PRs
 - Cut new dev build with GH Actions / manually
 - Checked on 3.8 build (Numba in defaults soon)
 - Asked for feedback on Flatpickr / Date property
 
-## Actions
+### Actions
 
 - [ ] (Phillip) Merge MultiChooser PR
 - [x] (Phillip) Review JLab widgets PR
