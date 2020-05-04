@@ -22,33 +22,33 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 ## Template
 ```
-# Date
+## DD-MMM
 
 *Attending:*
 
-## Agenda
+### Agenda
 - item1
 - item2
   - **Decision:**
   
-## Updates
+### Updates
 
-### Name
+#### Name
 - update1
 - update2
 
-## Actions
+### Actions
 ```
 
 ---
 
 # May
 
-* [DD-MMM](#DD-MMM)
+* [06-May](#06-May)
 
 ## 06 May
 
-*Attending: *
+*Attending:*
 
 ### Agenda
 - AWS cleanup
