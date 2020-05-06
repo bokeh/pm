@@ -44,19 +44,78 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 # May
 
-* [06-May](#06-May)
-
-## 06 May
+* [13-May](#13-May)
 
 *Attending:*
 
 ### Agenda
-- AWS cleanup
-    - can ci.bokeh.org be retired?
+    
+  
+### Updates
+
+
+### Actions
+
+- [ ] (Bryan) Set up CZI meetings with Jim and others
+
+## 13 May
+
+* [06-May](#06-May)
+
+## 06 May
+
+*Attending: Ayush, Bryan, Carolyn, Mateusz, Pavithra, Philipp*
+
+### Agenda
+- AWS topics
+    - Can ci.bokeh.org be retired?
+    - Bokeh AWS account joined NF AWS org
+- Org/governance updates
+    - Carolying joined NF committee
+    - Codifying unanimous consent consensus model
+- GSOC official announcement
+- Some really nice showcases
 
 ### Updates
 
+#### Bryan
+- Started adding context and help to GFI issues
+- Investigating options for CDN log data pipeline
+- Updated some org documentation
+
+#### Carolyn
+- great new showcases; tweeting out this week MWF
+- changes to Medium account to allow multiple writers. Will be in touch with Ayush to get set up for his GSOC blog contributions
+- now able to do some Windows testing
+
+#### Pavithra
+- Filed the GSoD Application
+- New HackMD note
+
+#### Ayush
+
+- Start looking at issues and prioritizing
+- Set up kickoff meeting
+
+#### Mateusz
+- Merged new testing framework (image baselines in the repo)
+- Experimental work on generalized canvas positioning (next week)
+- Allow to use different box select modes without keyboard
+- Support for toolbar button context menus
+- Working on watch mode for dev
+
+#### Philipp
+
+- Ipywidgets/Jupyter integration work
+    - Some events remaining to implement
+    - Working on adding throttling options
+- Talking with Google Colab about providing comms
+
 ### Actions
+
+- [ ] (Bryan, Philipp, Ayush) Schedule kick-off for GSOC 
+- [ ] (Ayush) Send link to Full GSOC proposal to Mateusz/Slack
+- [ ] (Pavithra) Set up a #grants/#czi Slack channel
 
 # April
 
@@ -77,6 +136,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - 17th May (4 hours), apply by 10th.
 
 ### Updates
+
 
 #### Bryan
 
@@ -109,7 +169,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - [ ] **(Mateusz) Look in to keeping OTP token turned for NPM**
 - [ ] (Mateusz) Open an issue to discuss testing automation
 - [x] (Bryan) Set up Google calendar for Project 
-- [ ] (Pavithra) Submit GSoD application by Friday
+- [x] (Pavithra) Submit GSoD application by Friday
 
 ## 22 Apr
 
