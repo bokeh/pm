@@ -44,23 +44,105 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 # May
 
+* [20-May](#20-May)
 * [13-May](#13-May)
+* [06-May](#06-May)
 
-*Attending:*
+## 20 May
+
+*Attending: Bryan, Jim, Mateusz, Pavithra, Philipp*
 
 ### Agenda
-    
+
+- 2.1 release target status
+- get a couple bullet points for project updates for me to send to NumFocus for May (Carolyn)
+
+### Updates
+
+#### Bryan
+
+- PyCon Mentored Sprints
+- Lots of new PR review/triage
+- GH Org sponsorship application
+
+#### Mateusz
+
+- fixed disabled property across widgets
+- future branch changes are backported
+- improving some internal data managing in BokehJS
+    - supports color bar work
+- fixed issues with webgl selections
+- commited svg renderer and fixed rendering of circles
+
+#### Philipp
+
+- Mateusz merged my jupyter_bokeh PR for improving event handling
+    - supports throttling, combining events
+- Will work on blog post
+
+#### Pavithra
+
+- organized participated in Mentored Sprints
+- helping GSoD 
+
+### Actions
+
+- [ ] (Phillip) open issue around improving pure Bokeh events
+- [ ] (Mateusz) make issue around SVG breakage
+- [ ] *(Bryan) Set up CZI meetings with Jim and others*
+
+## 13 May
+
+*Attending: Ayush, Bryan, Carolyn, Mateusz, Pavithra, Philipp*
+
+### Agenda
+
+- Bokeh got accepted to Season of Docs!
+    - Lots of new folks in Slack
+- 2.1 release timeline
+    - propose code freeze end of month (31st May)
+    - next meeting talk about milestones
   
 ### Updates
 
+#### Carolyn
+
+- Lots of new great showcase examples
+- working on Bokeh palette
+
+#### Ayush 
+
+- Looking at design of tools
+- Setting up meeting schedules
+
+#### Mateusz
+
+- Backporting work from future branch
+- PR to vendor SVG library 
+- Looking at OS build issue
+- Also still working on colorbars, etc
+
+#### Pavithra
+
+- PRs to highlight CoC
+- Getting lots of things in the calendar
+
+#### Philipp
+
+- ipywidgets/jupyter work 
+    - can run nbconvert on notebook w/ ipywidgets
+- Working on blog post abotu juptyter integration
+
+#### Bryan
+
+- Finished PR for extra markers
+- Infrastructure work - AWS
+- Looking into Twitter and LinkedIn posts
 
 ### Actions
 
 - [ ] (Bryan) Set up CZI meetings with Jim and others
-
-## 13 May
-
-* [06-May](#06-May)
+- [ ] (Pavithra) Set up call with grant writer help -- [Sumana](https://www.harihareswara.net/)
 
 ## 06 May
 
@@ -71,7 +153,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - Can ci.bokeh.org be retired?
     - Bokeh AWS account joined NF AWS org
 - Org/governance updates
-    - Carolying joined NF committee
+    - Carolyn joined NF committee
     - Codifying unanimous consent consensus model
 - GSOC official announcement
 - Some really nice showcases
@@ -114,8 +196,8 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 ### Actions
 
 - [ ] (Bryan, Philipp, Ayush) Schedule kick-off for GSOC 
-- [ ] (Ayush) Send link to Full GSOC proposal to Mateusz/Slack
-- [ ] (Pavithra) Set up a #grants/#czi Slack channel
+- [x] (Ayush) Send link to Full GSOC proposal to Mateusz/Slack
+- [x] (Pavithra) Set up a #grants/#czi Slack channel
 
 # April
 
