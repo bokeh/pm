@@ -14,6 +14,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 ## Links
 
+* [June](#June)
 * [May](#May)
 * [April](#April)
 * [March](#March)
@@ -42,11 +43,165 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 ---
 
+# June
+
+* [10-Jun](#10-Jun)
+* [03-Jun](#03-Jun)
+
+## 10-Jun
+
+*Attending: Bryan, Carolyn, Mateusz, Pavithra, Philipp*
+
+### Agenda
+- release branch?
+- GH org Sponsors
+- Release plans
+    - rc2 out now, will release Monday
+    - testing of release candidates/ docs
+  
+### Updates
+
+#### Mateusz
+- finalized work on bokehjs' unit tests and structural equality
+- fixed regressions related to resizing and repainting canvas
+- fixed image baseline tests broken by the release of Chrome 83
+- added support for archiving (via artifacts) examples tests' output
+- continued work on data management for color mappers and color bars
+    - redesign of indexing; introduced `BitSet` data structure (WIP)
+
+#### Bryan
+- prepping release candidates
+
+#### Philipp
+
+- Started ipywidgets blog post
+- Testing Colab integration
+
+#### Carolyn
+- old blog updated to point to Medium
+- 2.1 blog post ready to go 
+- Ayush's first post up!
+- Starting on blog post covering GitHub sponsorship, ongoing, projects, org changes -- target for publication later next week
+
+#### Pavithra
+- Tiny PR for backdating medium blogs
+- Some CZI research
+- Getting back to FDV
+
+### Actions
+- [ ] (Mateusz) Make issue to discuss releasing from a release branch
+- [ ] (Philipp) Make issue to discuss porting Panel Widgets
+- [ ] *(Pavithra) Email to Sumana for grant writing help*
+
+## 03-Jun
+
+*Attending: Ayush, Bryan, Mateusz, Philipp*
+
+### Agenda
+
+- release this week
+    - build RCs tomorrow
+    - plan to announce next monday
+  
+### Updates
+
+#### Mateusz
+- implemented cached HTML layout
+- fixed various issues around Tool.active
+- fixed issues with resizing and clearing SVG canvas
+- added support for menus to proxy toolbar
+- more upgrades to Map/Set across the codebase 
+- improvements to bokehjs' tests and structural equality
+    - replacement for `chai`
+    - `Equals` interface and `Symbol.equals`
+    - make structural equality the default in tests
+    - normalized and robustified assertions
+
+#### Ayush
+
+- Started working on measurement 
+    - draft this week 
+- Working on first blog
+
+#### Philipp
+
+- Running into some issues with ipywidgets_bokeh
+  - Events not being processed in some scenarios; working on reproducible example
+  - requirejs confusing notebook detection for Panel
+  - External assets (e.g. icons/fonts) not loading
+- Will look into Colab comms (got a minimal example working)
+
+#### Bryan
+
+- fix build issue where local built package was not used
+    - still some issue with weird version being reported
+- fixed transparent toolbar highlight for dark modes
+- re-submitted mrocklin BaseServer -> BokehTornado PR
+
+### Actions
+- [ ] ***(Bryan) Set up CZI meetings with Jim and others***
+
+### Actions
+
 # May
 
+* [27-May](#27-May)
 * [20-May](#20-May)
 * [13-May](#13-May)
 * [06-May](#06-May)
+
+## 27-May
+
+*Attending: Ayush, Bryan, Carolyn, Mateusz, Pavithra*
+
+### Agenda
+- GH Org sponsorship
+- PyCon India and Africa CFP open
+    - [India](https://in.pycon.org/cfp/2020/proposals/) - CFP closes on 14th August
+    - [Africa](https://africa.pycon.org/) - CFP closes on 5th June
+- Code freeze for 2.1 -- Monday
+  
+### Updates
+
+#### Bryan
+- reworked mrocklins BaseServer PR
+- working on cleaning up Github CI mess
+- fix docs old/preview warning banner 
+- lots triage/review/new contrib interaction
+
+#### Carolyn
+- would like to put up a Medium post about all our projects; will outline and ask for input from others
+- how best to help with GSOD contributors?
+
+#### Mateusz
+- continued work on color bars and data flow/management in bokehjs
+- more robust support for handling ndarray serialization
+    - ndarrays can appear outside of ColumnarDataSource.data
+    - binary/base64 encoding can be used (almost) everywhere
+    - shapes are now handled on ndarray objects
+- replaced setter/setter_id with a less verbose mechanism
+- various improvements to widgets
+    - slickgrid and flatpickr are properly destoryed
+    - disabled property is now full respected
+    - focus is maintaind across all widgets
+- introduced "copy to clipboard" sub-action of save tool
+- various code robustness improvements
+    - dropped isStrictNaN
+    - removed our custom Set type
+    - substantially increased usage of Map and Set types
+    - substantially reduced usage of for-in loop and in opreator
+
+#### Pavithra
+- Figured out how to backdate and import older blogs into medium
+    - I'll try to do it this week
+
+### Actions
+- [ ] *(Pavithra) Email to Sumana for grant writing help*
+- [ ] *(Phillip) open issue around improving pure Bokeh events*
+- [x] *(Mateusz) make issue around SVG breakage*
+- [x] (Carolyn) post on old blog redirecting to Medium
+- [x] (Carolyn) write Medium post about ongoing projects
+- [ ] ***(Bryan) Set up CZI meetings with Jim and others***
 
 ## 20 May
 
