@@ -45,8 +45,103 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 # June
 
+* [24-Jun](#24-Jun)
+* [17-Jun](#17-Jun)
 * [10-Jun](#10-Jun)
 * [03-Jun](#03-Jun)
+
+## 24-Jun
+
+*Attending: Bryan, Mateusz, Pavithra, Philipp*
+
+### Agenda
+- New BEPs?
+    - Decision Making/Recording
+    - Privacy Policy
+        - TBD waiting on CDN scrubbing pipeline
+    - Branching Process
+        - Will draft from issue comments this week
+- Recent Comparisons
+    - https://containds.com/2020/06/19/a-roundup-of-data-visualization-frameworks/
+    - https://pauliacomi.com/2020/06/07/plotly-v-bokeh.html
+- GSOD
+    -  https://discourse.bokeh.org/t/season-of-docs-2020-proposals/5769
+- GSOC Status
+  
+### Updates
+
+#### Mateusz
+
+- first draft of color bars and color mapping improvements
+- initial refactoring for sub-coordinate systems support
+- various performance improvements (e.g. Patches)
+- rewrote gloo in TS and incorporated it into bokehjs
+- fixed Rect placement with partial categoricals
+
+#### Philipp
+
+- Released HoloViews 1.13.3 and Panel 0.9.6
+- Did not observe any regressions with 2.1.1
+- Still writing ipywidgets blog post
+
+#### Bryan
+- Released 2.1.1
+- Working on new automation this week
+- Small fixes
+- Started Draft BEPs
+
+
+### Actions
+
+- [ ] (Bryan) look at starting branch-2.2
+- [ ] (Bryan) look at cherry picking 2.1.1 fixes forward
+- [ ] (Bryan) flesh out BEP drafts
+ 
+## 17-Jun
+
+*Attending: Ayush, Bryan, Jim, Mateusz, Pavithra, Philipp*
+
+### Agenda
+
+- Projects/tasks to promote for CZI?
+    - Replace WebGL task
+    - Suggestions: Testing, improve SVG
+- Release post-mortem, 2.1.1 release on Monday
+    - Cherry pick 2.1.1 release 
+  
+### Updates
+
+#### Bryan
+
+- Release 2.1 on Monday 
+- Looking at webgl
+
+#### Mateusz
+
+- regression fixes after 2.1 release
+- improved serialization of typed arrays
+- more efficient construction of spatial index
+- assert glyphs use typed arrays whenever possible
+- other minor speed improvements to glyphs
+- made all renderers respect `visible` property
+- support for storing buffers separately from JSON
+- early WIP for filling in gaps in `HasProps.define()`
+
+#### Pavithra
+
+- imported some blog posts to medium
+- progress on FDV
+
+#### Philipp
+
+- Looking at Django server cleanup handling
+
+### Actions
+
+- [x] (bryan) Start CZI application doc
+- [x] (bryan) Send Medium embedding infor to Pavithra
+- [ ] (bryan) Ask around about 2d canvas optimization
+- [x] (bryan) Send out last CZI questionaire results
 
 ## 10-Jun
 
@@ -89,9 +184,9 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - Getting back to FDV
 
 ### Actions
-- [ ] (Mateusz) Make issue to discuss releasing from a release branch
-- [ ] (Philipp) Make issue to discuss porting Panel Widgets
-- [ ] *(Pavithra) Email to Sumana for grant writing help*
+- [x] (Mateusz) Make issue to discuss releasing from a release branch
+- [x] (Philipp) Make issue to discuss porting Panel Widgets
+- [ ] *(Pavithra) Email for grant writing help*
 
 ## 03-Jun
 
@@ -196,7 +291,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
     - I'll try to do it this week
 
 ### Actions
-- [ ] *(Pavithra) Email to Sumana for grant writing help*
+- [ ] *(Pavithra) Email for grant writing help*
 - [ ] *(Phillip) open issue around improving pure Bokeh events*
 - [x] *(Mateusz) make issue around SVG breakage*
 - [x] (Carolyn) post on old blog redirecting to Medium
@@ -297,7 +392,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 ### Actions
 
 - [ ] (Bryan) Set up CZI meetings with Jim and others
-- [ ] (Pavithra) Set up call with grant writer help -- [Sumana](https://www.harihareswara.net/)
+- [ ] (Pavithra) Set up call with grant writer help
 
 ## 06 May
 
