@@ -12,8 +12,10 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 - HackMD: https://hackmd.io/@bokeh/HyYsdmvFI
 - GitHub Archive: [minutes/Weekly Sync - 2020.md](https://github.com/bokeh/pm/blob/master/minutes/Weekly%20Sync%20-%202020.md)
 
+
 ## Links
 
+* [July](#July)
 * [June](#June)
 * [May](#May)
 * [April](#April)
@@ -42,6 +44,84 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 ```
 
 ---
+
+# July
+
+* [01-Jul](#01-Jul)
+
+## 01-Jul
+
+*Attending: Ayush, Bryan, Jim, Mateusz, Pavithra, Phillip*
+
+### Agenda
+- Retire Zulip instance? (no activity for ~2 months: https://bokeh.zulipchat.com/stats)
+- Scipy 2020 Sprint - 11th, 12th July
+- Next release planning
+    - **end of July/ 1st week of Aug**
+- Kaleido project from Jon Mease
+- CZI status
+  
+### Updates
+
+#### Bryan
+
+- Updated various deployment scripts
+- Published Draft of BEP 7: Decision Making
+- Will work on BEP 8: Privacy policy draft next
+- Fixed a docs build issue on Windows
+- Did forward merge of 2.1.1 changes to branch-2.2
+
+#### Mateusz
+
+- exploratory work towards support for webworkers
+    - this includes DOM-less environments in general
+- preliminary work to restore legacy bundles
+- improved performance of tooltip rendering
+    - do NOT use `innerHTML` due to its abysmal performance
+    - reduce DOM node allocations; reuse nodes when possible
+- redesigned "materialization" of data specs in glyphs
+    - explicit instead of implicit (no more `this._xs != null` style checks)
+    - enforce usage of typed arrays further more (on top of earlier changes)
+    - use in-place array transforms where applicable
+- continued work on filtering and efficient indexing
+- improved initialization speed with faster `HasProps.setv()`
+- partial fix to bundling issues of luma.gl
+- restored bokehjs' codebase linting in CI
+- allowed to resize baseline images in visual tests
+- fixed multiple recent regressions
+
+#### Pavithra
+
+- Imported+published more blogs
+    - Medium was sending notifications for backdated post, so contacted their support
+- Contacted Sumana for grant-writing help
+- Started some preparatory work for SciPy Sprints -- screencasts and curating GFIs
+- Published the survey form
+
+#### Philipp
+
+- Looking at encrypting JWT token somehow
+- Some progress on histogram equalization colormapper
+- Still planning on looking on Django server cleanup
+
+#### Ayush
+
+- Working on InfoPane
+
+#### JimB
+
+- Interesting new static-image export capabilities being developed by Jon Mease; hoping we can follow up on those.
+- Looks like Jean-Luc and Mateusz's generalizations of colormapping are finally getting ready to deliver, thanks to some last-minute fixes from Philipp. Should make lots of cool client-side functionality available.
+- Blog on ipywidgets before SciPy?
+
+
+### Actions
+
+- [ ] (Phillip) make issue about OAUTH tokens
+- [ ] (Bryan) Make build automation triggerable on CI action
+- [x] (Bryan) scipy blog suggestion to Carolyn
+- [x] (Bryan, Pavithra) retire Zulip
+- [ ] (Bryan, Carolyn, Pavithra) Set up call w/ Sumara to discuss CZI 
 
 # June
 
