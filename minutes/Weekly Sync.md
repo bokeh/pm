@@ -8,8 +8,13 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 ## Minutes
 
+### 2021
+
+* [Q1](./weekly-sync/2021-Q1.md)
+
 ### 2020
 
+* [Q4](./weekly-sync/2020-Q4.md)
 * [Q3](./weekly-sync/2020-Q3.md)
 * [Q2](./weekly-sync/2020-Q2.md)
 * [Q1](./weekly-sync/2020-Q1.md)
