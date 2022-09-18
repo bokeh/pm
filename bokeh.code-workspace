@@ -1,0 +1,97 @@
+{
+	"folders": [
+        {
+            "name": "root",
+            "path": "../bokeh"
+        },
+        {
+            "name": "python",
+            "path": "../bokeh/src/bokeh/"
+        },
+        {
+            "name": "javascript",
+            "path": "../bokeh/bokehjs"
+        },
+        {
+            "name": "docs",
+            "path": "../bokeh/docs/bokeh"
+        },
+        {
+            "name": "examples",
+            "path": "../bokeh/examples"
+        },
+        {
+            "name": "tests",
+            "path": "../bokeh/tests"
+        },
+    ],
+    "extensions": {
+        "recommendations": [
+            "dbaeumer.vscode-eslint",
+            "davidanson.vscode-markdownlint",
+            "dotiful.dotfiles-syntax-highlighting",
+            "benspaulding.python-manifest-template",
+            "mechatroner.rainbow-csv"
+        ]
+    },
+    "settings": {
+        "[json]": {
+            "editor.tabSize": 2,
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[javascript]": {
+            "editor.tabSize": 2,
+        },
+        "[python]": {
+            "editor.tabSize": 4,
+        },
+        "[typescript]": {
+            "editor.tabSize": 2,
+        },
+        "eslint.debug": true,
+        "eslint.nodeEnv": "production",
+        "eslint.lintTask.enable": true,
+        "eslint.run": "onType",
+        "eslint.probe": [
+            "typescript"
+        ],
+        "eslint.workingDirectories": [
+            "./bokehjs",
+            "./bokehjs/src/lib",
+            "./bokehjs/src/lib/api",
+            "./bokehjs/src/lib/client",
+            "./bokehjs/src/lib/core",
+            "./bokehjs/src/lib/document",
+            "./bokehjs/src/lib/embed",
+            "./bokehjs/src/lib/external",
+            "./bokehjs/src/lib/models",
+            "./bokehjs/src/lib/protocol",
+        ],
+        "files.trimFinalNewlines": true,
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "files.exclude": {
+            "**/.*cache/**": true,
+            "**/.git": true,
+            "**/*.pyc": {"when": "$(basename).py"},
+            "**/__pycache__": true,
+            "**/build/**": true,
+        },
+        "files.watcherExclude": {
+            "**/build/**": true,
+            "**/.*cache/**": true,
+            "**/node_modules/**": true
+        },
+        "search.exclude": {
+            "**/build/**": true,
+            "**/.*cache/**": true,
+            "**/node_modules/**": true
+        },
+        "typescript.tsdk": "bokeh/bokehjs/node_modules/typescript/lib",
+        "yaml.schemas": {
+            "file:///Users/bryan/.vscode/extensions/ms-python.python-2021.10.1365161279/schemas/conda-meta.json": "file:///Users/bryan/work/bokeh/conda/recipe/meta.yaml"
+        }
+    },
+}
