@@ -73,11 +73,14 @@
         "files.insertFinalNewline": true,
         "files.trimTrailingWhitespace": true,
         "files.exclude": {
+            "**/__pycache__": true,
             "**/.*cache/**": true,
             "**/.git": true,
-            "**/*.pyc": {"when": "$(basename).py"},
-            "**/__pycache__": true,
-            "**/build/**": true,
+            "**/.vscode": true,
+            "**/*.pyc": {
+                "when": "$(basename).py"
+            },
+            "**/build/**": true
         },
         "files.watcherExclude": {
             "**/build/**": true,
