@@ -10,6 +10,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 ## Minutes
 
+* 2026: [Q1](./weekly-sync/2026-Q1.md)
 * 2025: [Q4](./weekly-sync/2025-Q4.md), [Q3](./weekly-sync/2025-Q3.md), [Q2](./weekly-sync/2025-Q2.md), [Q1](./weekly-sync/2025-Q1.md)
 * 2024: [Q4](./weekly-sync/2024-Q4.md), [Q3](./weekly-sync/2024-Q3.md), [Q2](./weekly-sync/2024-Q2.md), [Q1](./weekly-sync/2024-Q1.md)
 * 2023: [Q4](./weekly-sync/2023-Q4.md), [Q3](./weekly-sync/2023-Q3.md), [Q2]((./weekly-sync/2023-Q2.md)), [Q1](./weekly-sync/2023-Q1.md)
