@@ -6,7 +6,7 @@ Weekly sync meetings are a chance for active **@bokeh/dev** members to share tec
 
 **Location:** https://meet.google.com/dtm-iycn-ctx?hs=122
 
-**Collaborative notes:** https://hackmd.io/@bokeh
+**Collaborative notes:** https://hackmd.io/@bokeh (or https://hackmd.io/team/bokeh?nav=overview if signed in)
 
 ## Minutes
 
