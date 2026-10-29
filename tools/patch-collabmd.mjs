@@ -20,7 +20,7 @@ try {
 }
 
 // Restore the upstream inputs before reapplying a changed patch.
-for (const directory of ['src/client/application', 'dist/client', 'dist/client/assets']) {
+for (const directory of ['src/client/application', 'scripts', 'dist/client', 'dist/client/assets']) {
     for (const name of readdirSync(join(dependency, directory))) {
         if (name.endsWith('.pm-original')) {
             const path = join(dependency, directory, name);
@@ -47,6 +47,19 @@ function replaceOnce(source, before, after) {
     if (source.split(before).length !== 2) throw new Error('CollabMD patch target changed or is ambiguous');
     return source.replace(before, after);
 }
+
+// Keep CollabMD's existing tunnel lifecycle. Open only its authenticated Share
+// URL, after Cloudflare reports it, rather than opening localhost prematurely.
+patch('scripts/cloudflare-tunnel.mjs', (source) => replaceOnce(
+    source,
+    '  console.log(`[tunnel] Share URL: ${shareUrl}`);',
+    '  console.log(`[tunnel] Share URL: ${shareUrl}`);\n'
+        + '  if (process.env.PM_NOTES_BROWSER_MODULE) {\n'
+        + '    void import(process.env.PM_NOTES_BROWSER_MODULE)\n'
+        + '      .then(({ openBrowser }) => openBrowser(shareUrl))\n'
+        + '      .catch(() => console.warn("Could not open a browser. Open the Share URL manually."));\n'
+        + '  }',
+));
 
 patch('src/client/application/preview-render-compiler.js', (source) => (
     replaceOnce("import { install as installPmMarkdown } from '../domain/pm-markdown.js';\n" + source,

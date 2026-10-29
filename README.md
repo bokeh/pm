@@ -11,7 +11,7 @@ or Linux. The launcher uses Node.js and requires no Unix shell:
 pixi run notes
 ```
 
-Your default browser opens <http://127.0.0.1:1234> after the server starts.
+Your default browser opens <http://127.0.0.1:1234> after the local server starts.
 Use `pixi run notes --no-browser` to skip opening it (also supported by
 `notes-share`). Stop the server with **Ctrl+C** in its terminal.
 Pixi installs the locked Node.js 26.12.1 runtime. The first launch automatically
@@ -61,7 +61,9 @@ installation is needed. Later sharing sessions reuse that binary.
 `pixi run notes-share` remains an alias for the same behavior.
 
 This keeps the server bound to loopback but starts a public Cloudflare Quick
-Tunnel and generates a new password for this run. Share the printed URL and
+Tunnel and generates a new password for this run. Once the tunnel is ready,
+your browser opens its public Share URL with the password included in the
+fragment. `--no-browser` skips this. Share the printed URL and
 password only with trusted collaborators. A printed Share URL includes the
 password in its fragment, so anyone holding the full link can enter.
 **Ctrl+C** stops the server and tunnel. No permanent hosting is configured.

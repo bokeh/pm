@@ -1,4 +1,4 @@
-import { spawn, spawnSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -11,6 +11,7 @@ if (!['local', 'share'].includes(mode) || options.some((arg) => !['--no-git', '-
     process.exit(2);
 }
 
+const shared = mode === 'share' || options.includes('--shared');
 const cli = join(root, 'node_modules/collabmd/bin/collabmd.js');
 const lock = readFileSync('package-lock.json');
 const marker = 'node_modules/.notes-package-lock';
@@ -40,7 +41,7 @@ if (patch.status !== 0) process.exit(patch.status ?? 1);
 
 if (options.includes('--no-git')) process.env.COLLABMD_GIT_ENABLED = 'false';
 const args = [root, '--host', '127.0.0.1', '--port', '1234'];
-if (mode === 'share' || options.includes('--shared')) {
+if (shared) {
     const { ensureCloudflared } = await import('./cloudflared.mjs');
     const cloudflared = await ensureCloudflared(root);
     process.env.CLOUDFLARED_BIN = cloudflared;
@@ -54,18 +55,18 @@ if (mode === 'share' || options.includes('--shared')) {
     args.push('--auth', 'none', '--no-tunnel');
 }
 
+// The tunnel helper opens its password-bearing Share URL once it is ready.
+if (shared && !options.includes('--no-browser')) {
+    process.env.PM_NOTES_BROWSER_MODULE = pathToFileURL(join(root, 'tools/open-browser.mjs')).href;
+} else {
+    delete process.env.PM_NOTES_BROWSER_MODULE;
+}
+
 // Run in this process so CollabMD handles Ctrl+C and tunnel shutdown itself.
 process.argv = [process.execPath, cli, ...args];
 await import(pathToFileURL(cli).href);
 
-if (!options.includes('--no-browser')) {
-    const url = 'http://127.0.0.1:1234';
-    const [command, ...browserArgs] = process.platform === 'win32'
-        ? ['rundll32.exe', 'url.dll,FileProtocolHandler', url]
-        : process.platform === 'darwin' ? ['open', url] : ['xdg-open', url];
-    const browser = spawn(command, browserArgs, { stdio: 'ignore' });
-    const warn = () => console.warn(`Could not open a browser. Open ${url} manually.`);
-    browser.once('error', warn);
-    browser.once('exit', (code) => { if (code !== 0) warn(); });
-    browser.unref();
+if (!shared && !options.includes('--no-browser')) {
+    const { openBrowser } = await import('./open-browser.mjs');
+    openBrowser('http://127.0.0.1:1234');
 }
