@@ -79,7 +79,9 @@ pixi run notes --shared --no-git
 ### Markdown compatibility patch
 
 Startup automatically applies the repository's patch for emoji shortcodes and
-`<details>` / `<summary>` sections, including indented, multiline summaries in
+`<details>` / `<summary>` sections, and standalone `[TOC]` markers. Tables of
+contents link to CollabMD's existing heading IDs, including repeated headings.
+Disclosure support includes indented, multiline summaries in
 existing meeting templates. Markdown inside disclosures remains supported.
 Other raw HTML and tag attributes remain escaped, except the boolean `open`
 attribute on `<details>`. Emoji inside code stays literal. Emoticon shortcuts

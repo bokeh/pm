@@ -4,7 +4,7 @@ import vm from 'node:vm';
 import { compilePreviewDocument } from '../node_modules/collabmd/dist/client/assets/preview-render-compiler-B_gyVIfk.js';
 
 const render = (markdownText) => compilePreviewDocument({ markdownText }).html;
-const fixture = '<details>\n<summary>**Template** :computer:</summary>\n\n# Heading\n\n- [x] :clock8:\n\n</details>';
+const fixture = '[TOC]\n\n<details>\n<summary>**Template** :computer:</summary>\n\n# Heading\n\n- [x] :clock8:\n\n</details>';
 const html = render(fixture);
 assert.match(html, /<details>\n<summary><strong>Template<\/strong> 💻<\/summary>/);
 assert.match(html, /<h1[^>]*>Heading<\/h1>/);
@@ -19,6 +19,25 @@ assert.match(unsafe, /&lt;script&gt;/);
 assert.match(render('`:computer:`\n\n```html\n<details>\n:computer:\n</details>\n```'), /<code>:computer:<\/code>/);
 assert.doesNotMatch(render('```\n<details>\n:computer:\n</details>\n```'), /💻|<details>/);
 assert.match(render(':unknown_shortcode: :)'), /:unknown_shortcode: :\)/);
+
+const tocFixture = '[TOC]\n\n# First :computer:\n\n## **Updates**\n\n### [Link](https://example.com)\n\n# Second\n\n## Updates\n\n### <script>alert(1)</script>';
+const tocHtml = render(tocFixture);
+const navigation = /<nav aria-label="Table of contents"[^>]*>([\s\S]*?)<\/nav>/.exec(tocHtml)[1];
+const headingIds = [...tocHtml.matchAll(/<h[1-6][^>]* id="([^"]+)"/g)].map((match) => match[1]);
+const tocIds = [...navigation.matchAll(/href="#([^"]+)"/g)].map((match) => decodeURIComponent(match[1]));
+assert.deepEqual(tocIds, headingIds);
+assert.equal(new Set(tocIds).size, headingIds.length);
+assert.match(navigation, />First 💻<\/a>/);
+assert.match(navigation, />Updates<\/a>/);
+assert.match(navigation, />Link<\/a>/);
+assert.match(navigation, /&lt;script&gt;/);
+assert.doesNotMatch(navigation, /<script|<a[^>]*><a/);
+assert.ok((navigation.match(/<ol>/g) ?? []).length > 1);
+assert.match(render('`[TOC]`\n\n```\n[TOC]\n```\n\n    [TOC]'), /<code>\[TOC\]<\/code>/);
+assert.doesNotMatch(render('```\n[TOC]\n```\n\n    [TOC]'), /<nav/);
+assert.doesNotMatch(render('An inline [TOC] marker.'), /<nav/);
+assert.equal(render('[TOC]').trim(), '');
+assert.match(render('[toc]\n\n# Heading'), /<nav/);
 
 let disclosures = 0;
 let summaries = 0;
@@ -41,4 +60,4 @@ vm.runInNewContext(readFileSync('node_modules/collabmd/dist/client/assets/previe
 self.onmessage({ data: { markdownText: fixture, renderVersion: 1 } });
 assert.equal(message.error, undefined);
 assert.equal(message.html, html);
-console.log('Main preview and worker: emoji, disclosures, Markdown, escaping, code, and all 14 existing templates passed.');
+console.log('Main preview and worker: TOC heading IDs, hierarchy, escaping, code, emoji, and all 14 disclosure templates passed.');

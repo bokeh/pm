@@ -99,4 +99,4 @@ for (const directory of ['dist/client', 'dist/client/assets']) {
     }
 }
 writeFileSync(marker, fingerprint);
-console.log('Applied CollabMD emoji and disclosure patch.');
+console.log('Applied CollabMD Markdown compatibility patch.');
