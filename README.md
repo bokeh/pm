@@ -61,7 +61,7 @@ installation is needed. Later sharing sessions reuse that binary.
 `pixi run notes-share` remains an alias for the same behavior.
 
 This keeps the server bound to loopback but starts a public Cloudflare Quick
-Tunnel and generates a new password for this run. Once the tunnel is ready,
+Tunnel and generates a new password for this run. Once the public tunnel responds over HTTP (allowing time for DNS propagation),
 your browser opens its public Share URL with the password included in the
 fragment. `--no-browser` skips this. Share the printed URL and
 password only with trusted collaborators. A printed Share URL includes the
