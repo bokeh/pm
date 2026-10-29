@@ -1,0 +1,13 @@
+[workspace]
+name = "bokeh-pm"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64", "linux-64", "linux-aarch64", "win-64"]
+
+[dependencies]
+nodejs = "26.12.1.*"
+
+[tasks]
+notes = "node tools/notes.mjs local"
+
+[tasks.notes-share]
+cmd = "node tools/notes.mjs share"
