@@ -1,0 +1,25 @@
+{
+  "version": "2026.10.6",
+  "platforms": {
+    "darwin-x64": {
+      "name": "cloudflared-darwin-amd64.tgz",
+      "sha256": "6c04a13835ca5ff29a0c6f58d17d1f3956aad1b7df1631f5b5efbc06269deded"
+    },
+    "darwin-arm64": {
+      "name": "cloudflared-darwin-arm64.tgz",
+      "sha256": "ea1e5105d35bbe16cee5b2f7b4742059ada341fbd35938ed827c24b85efa51c8"
+    },
+    "linux-x64": {
+      "name": "cloudflared-linux-amd64",
+      "sha256": "1d356dac769d0dbf62ebe588c4034824bbff98d5790c2f844cc99e0e2f57462d"
+    },
+    "linux-arm64": {
+      "name": "cloudflared-linux-arm64",
+      "sha256": "0ae0e179475b2c77651a718d2b376e0151f4fca5954702a84f02843a4d5fcac0"
+    },
+    "win32-x64": {
+      "name": "cloudflared-windows-amd64.exe",
+      "sha256": "d521b3bf68982165f0d06d76732f22d9a105ef057ff3ae4c0986f3a23190950f"
+    }
+  }
+}

@@ -49,14 +49,16 @@ calling those APIs, or prevent editing and deleting files.
 
 ### Temporary collaborator sharing
 
-Install [cloudflared](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/)
-separately using the installer for your platform (on macOS,
-`brew install cloudflared`). Stop any local notes server,
-then explicitly run:
+Stop any local notes server, then explicitly run:
 
 ```text
-pixi run notes-share
+pixi run notes --shared
 ```
+
+On first use this downloads the pinned official cloudflared binary into
+`.pixi/cloudflared/` and verifies its SHA-256 checksum. No separate system
+installation is needed. Later sharing sessions reuse that binary.
+`pixi run notes-share` remains an alias for the same behavior.
 
 This keeps the server bound to loopback but starts a public Cloudflare Quick
 Tunnel and generates a new password for this run. Share the printed URL and
@@ -69,7 +71,7 @@ edit or delete checkout files and, with Git enabled, operate the host's Git
 controls and credentials. To hide the Git UI while sharing, use:
 
 ```text
-pixi run notes-share --no-git
+pixi run notes --shared --no-git
 ```
 
 ### Markdown compatibility patch
@@ -109,3 +111,9 @@ version's Node requirements. To change Node, update `pixi.toml`,
 run `pixi install`, and review and commit `pixi.lock` as well. `pixi update`
 refreshes allowed Pixi dependencies. Never commit generated dependencies or
 CollabMD metadata. These commands do not commit or push notes.
+
+The cloudflared release and per-platform download checksums are pinned in
+`tools/cloudflared.json`. To update it, select an official Cloudflare release
+and update that file's version, asset names, and SHA-256 digests. The next shared
+run installs the new version. `CLOUDFLARED_BIN` can select an existing binary
+instead of the managed download.

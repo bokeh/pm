@@ -6,8 +6,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 process.chdir(root);
 const [mode = 'local', ...options] = process.argv.slice(2);
-if (!['local', 'share'].includes(mode) || options.some((arg) => !['--no-git', '--no-browser'].includes(arg))) {
-    console.error('Usage: node tools/notes.mjs [local|share] [--no-git] [--no-browser]');
+if (!['local', 'share'].includes(mode) || options.some((arg) => !['--no-git', '--no-browser', '--shared'].includes(arg))) {
+    console.error('Usage: node tools/notes.mjs [local|share] [--shared] [--no-git] [--no-browser]');
     process.exit(2);
 }
 
@@ -40,11 +40,13 @@ if (patch.status !== 0) process.exit(patch.status ?? 1);
 
 if (options.includes('--no-git')) process.env.COLLABMD_GIT_ENABLED = 'false';
 const args = [root, '--host', '127.0.0.1', '--port', '1234'];
-if (mode === 'share') {
-    const cloudflared = process.env.CLOUDFLARED_BIN || 'cloudflared';
+if (mode === 'share' || options.includes('--shared')) {
+    const { ensureCloudflared } = await import('./cloudflared.mjs');
+    const cloudflared = await ensureCloudflared(root);
+    process.env.CLOUDFLARED_BIN = cloudflared;
     const check = spawnSync(cloudflared, ['--version'], { stdio: 'ignore' });
     if (check.error || check.status !== 0) {
-        throw new Error('Install cloudflared before sharing. See README.md.');
+        throw new Error('cloudflared could not run. See README.md.');
     }
     delete process.env.AUTH_PASSWORD;
     args.push('--auth', 'password');
