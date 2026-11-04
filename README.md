@@ -76,11 +76,18 @@ controls and credentials. To hide the Git UI while sharing, use:
 pixi run notes --shared --no-git
 ```
 
+### Start a weekly sync meeting
+
+Run `pixi run notes --new-meeting 2026-11-04` with the meeting date in
+`YYYY-MM-DD` format. The launcher adds the meeting from the template and updates
+the Markdown table of contents before opening CollabMD. Running it again for
+the same date preserves the existing meeting. If the quarter's file does not
+exist, the launcher creates it using the latest earlier quarter's template.
+
 ### Markdown compatibility patch
 
 Startup automatically applies the repository's patch for emoji shortcodes and
-`<details>` / `<summary>` sections, and standalone `[TOC]` markers. Tables of
-contents link to CollabMD's existing heading IDs, including repeated headings.
+`<details>` / `<summary>` sections.
 Disclosure support includes indented, multiline summaries in
 existing meeting templates. Markdown inside disclosures remains supported.
 Other raw HTML and tag attributes remain escaped, except the boolean `open`

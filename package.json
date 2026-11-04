@@ -4,6 +4,7 @@
   "dependencies": {
     "collabmd": "0.1.56",
     "esbuild": "0.25.12",
+    "markdown-it": "15.0.3",
     "markdown-it-emoji": "3.0.0"
   },
   "engines": {

@@ -6,8 +6,21 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 process.chdir(root);
 const [mode = 'local', ...options] = process.argv.slice(2);
+let meetingDate;
+const meetingIndex = options.indexOf('--new-meeting');
+if (meetingIndex !== -1) {
+    const date = options[meetingIndex + 1];
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? '')) {
+        throw new Error('--new-meeting requires a date in YYYY-MM-DD format.');
+    }
+    meetingDate = new Date(date + 'T00:00:00Z');
+    if (!Number.isFinite(meetingDate.getTime()) || meetingDate.toISOString().slice(0, 10) !== date) {
+        throw new Error(`Invalid meeting date: ${date}`);
+    }
+    options.splice(meetingIndex, 2);
+}
 if (!['local', 'share'].includes(mode) || options.some((arg) => !['--no-git', '--no-browser', '--shared'].includes(arg))) {
-    console.error('Usage: node tools/notes.mjs [local|share] [--shared] [--no-git] [--no-browser]');
+    console.error('Usage: node tools/notes.mjs [local|share] [--shared] [--no-git] [--no-browser] [--new-meeting YYYY-MM-DD]');
     process.exit(2);
 }
 
@@ -60,6 +73,11 @@ if (shared && !options.includes('--no-browser')) {
     process.env.PM_NOTES_BROWSER_MODULE = pathToFileURL(join(root, 'tools/open-browser.mjs')).href;
 } else {
     delete process.env.PM_NOTES_BROWSER_MODULE;
+}
+
+if (meetingDate) {
+    const { addMeeting } = await import('./notes-meeting.mjs');
+    addMeeting(root, meetingDate);
 }
 
 // Run in this process so CollabMD handles Ctrl+C and tunnel shutdown itself.
