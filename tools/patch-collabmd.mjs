@@ -20,7 +20,7 @@ try {
 }
 
 // Restore the upstream inputs before reapplying a changed patch.
-for (const directory of ['src/client/application', 'scripts', 'dist/client', 'dist/client/assets']) {
+for (const directory of ['src/client/application', 'src/client/presentation', 'scripts', 'dist/client', 'dist/client/assets']) {
     for (const name of readdirSync(join(dependency, directory))) {
         if (name.endsWith('.pm-original')) {
             const path = join(dependency, directory, name);
@@ -79,6 +79,32 @@ for (const name of ['preview-render-compiler-B_gyVIfk.js', 'preview-render-worke
         'bokehPmMarkdown.install(i),i.core.ruler.push(`collabmd-source-lines`',
     ));
 }
+// Collapsed templates have source lines but no rendered position.
+function isVisibleDisclosureBlock(element) {
+    for (let details = element.closest('details'); details; details = details.parentElement?.closest('details')) {
+        if (!details.open && !details.querySelector(':scope > summary')?.contains(element)) return false;
+    }
+    return true;
+}
+
+patch('src/client/presentation/scroll-sync-controller.js', (source) => {
+    const scrollListener = "    this.previewContainer?.addEventListener('scroll', this.handlePreviewScroll, { passive: true, signal });";
+    return replaceOnce(replaceOnce(source,
+        scrollListener,
+        scrollListener + "\n    this.previewElement?.addEventListener('toggle', () => this.invalidatePreviewBlocks(), { capture: true, signal });"),
+        'Array.from(this.previewElement.querySelectorAll(SOURCE_BLOCK_SELECTOR))',
+        'Array.from(this.previewElement.querySelectorAll(SOURCE_BLOCK_SELECTOR)).filter(isVisibleDisclosureBlock)')
+        + '\n' + isVisibleDisclosureBlock.toString() + '\n';
+});
+patch('dist/client/assets/index-BebSD0ym.js', (source) => {
+    const scrollListener = 'this.previewContainer?.addEventListener(`scroll`,this.handlePreviewScroll,{passive:!0,signal:e})';
+    return replaceOnce(replaceOnce(source,
+        scrollListener,
+        scrollListener + ',this.previewElement?.addEventListener(`toggle`,()=>this.invalidatePreviewBlocks(),{capture:!0,signal:e})'),
+        'Array.from(this.previewElement.querySelectorAll(Cc)).map',
+        'Array.from(this.previewElement.querySelectorAll(Cc)).filter(' + isVisibleDisclosureBlock.toString() + ').map');
+});
+
 // Upstream assets have immutable cache headers. Version the whole JS import
 // graph from the uncached HTML entry points so existing browsers see the patch.
 const assets = join(dependency, 'dist/client/assets');
