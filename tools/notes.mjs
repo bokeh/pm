@@ -48,9 +48,11 @@ if (!existsSync(cli) || !existsSync(marker) || !lock.equals(readFileSync(marker)
     writeFileSync(marker, lock);
 }
 
-const patch = spawnSync(process.execPath, ['tools/patch-collabmd.mjs'], { stdio: 'inherit' });
-if (patch.error) throw patch.error;
-if (patch.status !== 0) process.exit(patch.status ?? 1);
+if (shared && !options.includes('--no-browser')) {
+    const patch = spawnSync(process.execPath, ['tools/patch-collabmd.mjs'], { stdio: 'inherit' });
+    if (patch.error) throw patch.error;
+    if (patch.status !== 0) process.exit(patch.status ?? 1);
+}
 
 if (options.includes('--no-git')) process.env.COLLABMD_GIT_ENABLED = 'false';
 const args = [root, '--host', '127.0.0.1', '--port', '1234'];
