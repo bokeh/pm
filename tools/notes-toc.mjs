@@ -1,8 +1,11 @@
 const { default: markdownIt } = await import('markdown-it');
 const { assignHeadingIds } = await import('../node_modules/collabmd/src/client/domain/markdown-headings.js');
-const { install } = await import('./collabmd-markdown.mjs');
+const { enableMarkdownDetails } = await import('../node_modules/collabmd/src/client/domain/markdown-details.js');
+const { enableMarkdownEmoji } = await import('../node_modules/collabmd/src/client/domain/markdown-emoji.js');
 const markdown = markdownIt({ html: false });
-install(markdown);
+enableMarkdownDetails(markdown);
+// TOC labels have no wiki-link syntax to exclude from emoji expansion.
+enableMarkdownEmoji(markdown, /$^/g);
 export const begin = '[meeting-toc-start]: #';
 export const end = '[meeting-toc-end]: #';
 
@@ -19,7 +22,8 @@ export function updateMeetingToc(source) {
     const headings = [];
     let disclosures = 0;
     tokens.forEach((token, index) => {
-        if (token.type === 'pm_disclosure') disclosures += token.content.startsWith('</') ? -1 : 1;
+        if (token.type === 'details_open') disclosures += 1;
+        if (token.type === 'details_close') disclosures -= 1;
         if (token.type !== 'heading_open' || token.tag !== 'h2' || disclosures > 0) return;
         const inline = tokens[index + 1];
         const label = (inline.children ?? []).map((child) => child.content).join('')

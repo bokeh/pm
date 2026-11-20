@@ -15,7 +15,7 @@ Your default browser opens <http://127.0.0.1:1234> after the local server starts
 Use `pixi run notes --no-browser` to skip opening it (also supported by
 `notes-share`). Stop the server with **Ctrl+C** in its terminal.
 Pixi installs the locked Node.js 26.12.1 runtime. The first launch automatically
-runs `npm ci` to install CollabMD 0.1.56 from `package-lock.json`. Later launches
+runs `npm ci` to install CollabMD 0.1.57 from `package-lock.json`. Later launches
 reuse that installation unless the npm lockfile changes. Internet access is
 needed for installation, but subsequent launches can use the installed files.
 For strict lockfile checking, use `pixi run --locked notes`.
@@ -43,7 +43,7 @@ To hide CollabMD's Git integration in the UI for a session:
 pixi run notes --no-git
 ```
 
-The `--no-git` option sets `COLLABMD_GIT_ENABLED=false`. In 0.1.56 this setting is a UI/status switch, not an authorization boundary.
+The `--no-git` option sets `COLLABMD_GIT_ENABLED=false`. In 0.1.57 this setting is a UI/status switch, not an authorization boundary.
 Git command handlers remain registered. It does not prevent a trusted user from
 calling those APIs, or prevent editing and deleting files.
 
@@ -84,9 +84,9 @@ the Markdown table of contents before opening CollabMD. Running it again for
 the same date preserves the existing meeting. If the quarter's file does not
 exist, the launcher creates it using the latest earlier quarter's template.
 
-### Markdown compatibility patch
+### Markdown rendering
 
-Startup automatically applies the repository's patch for emoji shortcodes and
+CollabMD provides native support for emoji shortcodes and
 `<details>` / `<summary>` sections.
 Disclosure support includes indented, multiline summaries in
 existing meeting templates. Markdown inside disclosures remains supported.
@@ -94,13 +94,11 @@ Other raw HTML and tag attributes remain escaped, except the boolean `open`
 attribute on `<details>`. Emoji inside code stays literal. Emoticon shortcuts
 such as `:)` are left alone.
 
-The patch lives in `tools/collabmd-markdown.mjs` and
-`tools/patch-collabmd.mjs`. Pinned npm dependencies bundle it into CollabMD's main
-preview and worker assets on first use. Source and generated assets are patched
-only under ignored `node_modules/`. Changed patches are reapplied automatically,
-and browser asset URLs are versioned to avoid stale cached previews.
+No Markdown source or browser assets are patched. The remaining patch in
+`tools/patch-collabmd.mjs` opens the authenticated Share URL in your browser.
+It runs only when sharing with browser opening enabled.
 
-To check the installed patch after starting notes once:
+To check the installed Markdown renderer:
 
 ```text
 pixi run --locked node tools/test-collabmd.mjs
@@ -116,10 +114,9 @@ pixi run notes
 ```
 
 Review and commit both `package.json` and `package-lock.json` after validation.
-The patch deliberately requires CollabMD 0.1.56. Update and validate its source
-and bundle insertion points before changing CollabMD versions. Check the new
-version's Node requirements. To change Node, update `pixi.toml`,
-run `pixi install`, and review and commit `pixi.lock` as well. `pixi update`
+Check the Share URL hook and run `pixi run --locked node tools/test-collabmd.mjs`
+after updating CollabMD. Check the new version's Node requirements. To change
+Node, update `pixi.toml`, run `pixi install`, and review and commit `pixi.lock` as well. `pixi update`
 refreshes allowed Pixi dependencies. Never commit generated dependencies or
 CollabMD metadata. These commands do not commit or push notes.
 
